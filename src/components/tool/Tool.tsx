@@ -1,0 +1,29 @@
+import { Heading } from "../heading/Heading";
+import { ToolCard } from "../toolCard/ToolCard";
+import {
+  Container,
+  ToolContainer,
+  ToolSubContainer,
+} from "./styled";
+
+export const Tool = () => {
+  return (
+    <ToolContainer>
+      <ToolSubContainer>
+        <Heading title="essential tools" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse debitis sapiente quia" />
+        <Container>
+          <ToolCard image="/tool.png" title="Figma" description="Design tool" />
+          <ToolCard image="/tool.png" title="Figma" description="Design tool" />
+          <ToolCard image="/tool.png" title="Figma" description="Design tool" />
+          <ToolCard image="/tool.png" title="Figma" description="Design tool" />
+          <ToolCard image="/tool.png" title="Figma" description="Design tool" />
+          <ToolCard image="/tool.png" title="Figma" description="Design tool" />
+          <ToolCard image="/tool.png" title="Figma" description="Design tool" />
+          <ToolCard image="/tool.png" title="Figma" description="Design tool" />
+        </Container>
+      </ToolSubContainer>
+    </ToolContainer>
+  );
+};
+
+
