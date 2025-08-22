@@ -6,9 +6,9 @@ import {
   ToolSubContainer,
 } from "./styled";
 
-export const Tool = () => {
+export const Tool = ({ sectionId }: { sectionId: string }) => {
   return (
-    <ToolContainer>
+    <ToolContainer id={sectionId}>
       <ToolSubContainer>
         <Heading title="essential tools" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse debitis sapiente quia" />
         <Container>

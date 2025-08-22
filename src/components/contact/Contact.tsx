@@ -13,9 +13,9 @@ import {
 import { AiFillInstagram } from "react-icons/ai";
 import Form from "../form/Form";
 
-export const Contact = () => {
+export const Contact = ({ sectionId }: { sectionId: string }) => {
   return (
-    <ContactContainer>
+    <ContactContainer id={sectionId}>
       <ContactSubContainer>
         <Container>
           <Title>Let's Connect</Title>

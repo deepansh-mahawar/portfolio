@@ -1,3 +1,6 @@
+"use client"
+
+import { useEffect, useState } from "react";
 import {
   Btn,
   HeaderContainer,
@@ -8,15 +11,36 @@ import {
   SubHeaderContainer,
 } from "./styled";
 
-const menuItems = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Projects", href: "/projects" },
-  { label: "Contact Us", href: "/contact" },
-];
-
 export const Header = () => {
+  const sections = ["home", "services", "about", "projects", "contact"];
+  const [active, setActive] = useState("home");
+
+  const handleScroll = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActive(entry.target.id)
+        }
+      })
+    }, {
+      threshold: 0.6
+    }
+    );
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <HeaderContainer>
       <SubHeaderContainer>
@@ -24,9 +48,10 @@ export const Header = () => {
           <Logo src="/logo.png" alt="#" />
         </LogoContainer>
         <MenuContainer>
-          {menuItems.map((item) => (
-            <MenuBtn key={item.label} href={item.href}>
-              {item.label}
+          {sections.map((id) => (
+            <MenuBtn key={id} $active={active === id}
+              onClick={() => handleScroll(id)}>
+              {id.charAt(0).toUpperCase() + id.slice(1)}
             </MenuBtn>
           ))}
         </MenuContainer>

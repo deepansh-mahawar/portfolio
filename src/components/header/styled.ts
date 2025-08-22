@@ -8,8 +8,8 @@ export const HeaderContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 30px;
-  position: absolute;
+  padding: 30px 0px;
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
@@ -26,6 +26,7 @@ export const SubHeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  backdrop-filter: blur(10px);
 `;
 
 export const LogoContainer = styled.div`
@@ -51,10 +52,18 @@ export const MenuContainer = styled.div`
   gap: 30px;
 `;
 
-export const MenuBtn = styled(Link)`
+export const MenuBtn = styled.button<{ $active?: boolean }>(
+  ({$active = false}) => `
   font-size: 16px;
-  font-weight: 300;
-`;
+  font-weight: ${$active ? "500" : "300"};
+  transition: transform 500ms ease;
+  cursor: pointer;
+
+  &:hover{
+    transform: scale(1.05);
+  }
+`
+);
 
 export const Btn = styled.button`
   display: flex;
