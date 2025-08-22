@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+
+/* default window style */
 html,
 body {
   font-family: var(--font-poppins);
@@ -15,4 +17,29 @@ body {
   max-height: fit-content;
   min-width: 100vw;
   overflow-x: hidden;
+}
+
+/* default scrollbar style */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.8);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 100, 100, 0.5) transparent;
 }

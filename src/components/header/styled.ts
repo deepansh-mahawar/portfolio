@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
@@ -18,7 +17,6 @@ export const HeaderContainer = styled.div`
 `;
 
 export const SubHeaderContainer = styled.div`
-  background-color: transparent;
   width: 80%;
   border-radius: 50px;
   border: 1px solid #3e70be;
@@ -78,9 +76,9 @@ export const Btn = styled.button`
   border-radius: 30px;
   font-weight: 300;
   cursor: pointer;
-  transition: background-color 300ms ease;
+  transition: background-color 300ms ease, transform 300ms ease;
 
-  &:hover {
-    background-color: #3e70be2b;
+  &:active{
+    transform: scale(0.9);
   }
 `;

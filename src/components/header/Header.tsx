@@ -12,7 +12,7 @@ import {
 } from "./styled";
 
 export const Header = () => {
-  const sections = ["home", "services", "about", "projects", "tools", "contact"];
+  const sections = ["home", "services", "about", "tools", "projects"];
   const [active, setActive] = useState("home");
 
   const handleScroll = (id: string) => {
@@ -55,7 +55,7 @@ export const Header = () => {
             </MenuBtn>
           ))}
         </MenuContainer>
-        <Btn>Contact Us</Btn>
+        <Btn onClick={() => handleScroll("contact")}>Contact</Btn>
       </SubHeaderContainer>
     </HeaderContainer>
   );

@@ -4,7 +4,7 @@ import Link from "next/link";
 import styled from "styled-components";
 
 export const ContactContainer = styled.div`
-  width: 100vw;
+  width: 90%;
   height: 100vh;
   background-color: transparent;
   display: flex;
