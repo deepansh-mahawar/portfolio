@@ -10,8 +10,6 @@ export const HeaderContainer = styled.div`
   padding: 30px 0px;
   position: fixed;
   top: 0;
-  right: 0;
-  left: 0;
   z-index: 1000;
   background-color: transparent;
 `;
@@ -51,7 +49,7 @@ export const MenuContainer = styled.div`
 `;
 
 export const MenuBtn = styled.button<{ $active?: boolean }>(
-  ({$active = false}) => `
+  ({ $active = false }) => `
   font-size: 16px;
   font-weight: ${$active ? "500" : "300"};
   transition: transform 500ms ease;
@@ -63,13 +61,33 @@ export const MenuBtn = styled.button<{ $active?: boolean }>(
 `
 );
 
+// export const Btn = styled.button`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 54px;
+//   width: 140px;
+//   padding: 14px 0px;
+//   font-size: 16px;
+//   color: #fff;
+//   background-color: #3e70be;
+//   border-radius: 30px;
+//   font-weight: 300;
+//   cursor: pointer;
+//   transition: background-color 300ms ease, transform 300ms ease;
+
+//   &:active{
+//     transform: scale(0.9);
+//   }
+// `;
+
 export const Btn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 54px;
-  width: 140px;
-  padding: 14px 0px;
+  width: 54px;
+  padding: 14px 0;
   font-size: 16px;
   color: #fff;
   background-color: #3e70be;
@@ -78,7 +96,21 @@ export const Btn = styled.button`
   cursor: pointer;
   transition: background-color 300ms ease, transform 300ms ease;
 
-  &:active{
+  .icon {
+    font-size: 24px;
+    color: #fff;
+    transition: transform 300ms ease;
+  }
+
+  &:hover {
+    background-color: #345ea3;
+
+    .icon {
+      transform: scale(1.1);
+    }
+  }
+
+  &:active {
     transform: scale(0.9);
   }
 `;

@@ -18,7 +18,7 @@ export const Contact = ({ sectionId }: { sectionId: string }) => {
     <ContactContainer id={sectionId}>
       <ContactSubContainer>
         <Container>
-          <Title>Let's Connect</Title>
+          <Title>Lets Connect</Title>
           <DescriptionContainer>
             <Description>
               Say Hello at{" "}
@@ -27,7 +27,7 @@ export const Contact = ({ sectionId }: { sectionId: string }) => {
               </ContactLink>
             </Description>
             <Description>
-              For more info, here's my{" "}
+              For more info, heres my{" "}
               <ContactLink href="#">Resume</ContactLink>
             </Description>
           </DescriptionContainer>

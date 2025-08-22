@@ -61,7 +61,7 @@ export const Btn = styled.button`
   align-items: center;
   font-weight: 400;
   cursor: pointer;
-  transition: margin 200ms ease;
+  transition: margin 100ms ease-in-out;
 
   &:active {
     margin: 0;

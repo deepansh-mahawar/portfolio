@@ -3,7 +3,7 @@
 import styled from "styled-components";
 
 export const ToolContainer = styled.div`
-  width: 90%;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@ export const ToolSubContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 80%;
+  width: 70%;
   gap: 30px;
 `;
 export const Container = styled.div`

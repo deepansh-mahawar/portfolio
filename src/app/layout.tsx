@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { StyledComponentsRegistry } from "@/lib/StyledComponentsRegistry";
+import Header from "@/components/header/Header";
+import { Footer } from "@/components/footer/Footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -25,7 +27,11 @@ export default function RootLayout({
         className={`${poppins.variable} antialiased`}
         cz-shortcut-listen="true"
       >
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <Header />
+          {children}
+          <Footer />
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
-
-/* default window style */
 html,
 body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: var(--font-poppins);
   background-color: #000235;
   color: #ffffff;
@@ -12,14 +13,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   min-height: 100vh;
   max-height: fit-content;
-  min-width: 100vw;
+  width: 100vw;
   overflow-x: hidden;
 }
 
-/* default scrollbar style */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
