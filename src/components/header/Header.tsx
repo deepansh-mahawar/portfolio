@@ -12,7 +12,7 @@ import {
 } from "./styled";
 
 export const Header = () => {
-  const sections = ["home", "services", "about", "projects", "contact"];
+  const sections = ["home", "services", "about", "projects", "tools", "contact"];
   const [active, setActive] = useState("home");
 
   const handleScroll = (id: string) => {

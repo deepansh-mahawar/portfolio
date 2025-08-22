@@ -1,12 +1,11 @@
 "use client";
 
-import { Typography } from "@mui/material";
 import Link from "next/link";
 import styled from "styled-components";
 
 export const ContactContainer = styled.div`
-  width: 100%;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
   background-color: transparent;
   display: flex;
   justify-content: center;
@@ -15,7 +14,7 @@ export const ContactContainer = styled.div`
 export const ContactSubContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: start;
   width: 80%;
 `;
 export const Container = styled.div`

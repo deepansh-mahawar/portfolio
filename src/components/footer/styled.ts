@@ -4,11 +4,7 @@ import Link from "next/link";
 import styled from "styled-components";
 
 export const FooterContainer = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100% auto;
+  width: 100%;
   background-color: #3e70be;
   display: flex;
   justify-content: center;
