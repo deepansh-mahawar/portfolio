@@ -34,6 +34,7 @@ export const LogoContainer = styled.div`
   border-radius: 50%;
   padding: 14px;
   background-color: #3e70be;
+  cursor: pointer;
 `;
 
 export const Logo = styled.img`
@@ -60,26 +61,6 @@ export const MenuBtn = styled.button<{ $active?: boolean }>(
   }
 `
 );
-
-// export const Btn = styled.button`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 54px;
-//   width: 140px;
-//   padding: 14px 0px;
-//   font-size: 16px;
-//   color: #fff;
-//   background-color: #3e70be;
-//   border-radius: 30px;
-//   font-weight: 300;
-//   cursor: pointer;
-//   transition: background-color 300ms ease, transform 300ms ease;
-
-//   &:active{
-//     transform: scale(0.9);
-//   }
-// `;
 
 export const Btn = styled.button`
   display: flex;

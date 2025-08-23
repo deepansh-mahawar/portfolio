@@ -13,13 +13,12 @@ export const About = ({ sectionId }: { sectionId: string }) => {
       <AboutSubContainer>
         <Container>
           <AboutText>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
-            debitis sapiente quia dolorem ipsum cumque nisi. Ea laborum
-            exercitationem aperiam? Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Esse debitis sapiente quia dolorem ipsum cumque
-            nisi. Ea laborum exercitationem aperiam? Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Esse debitis sapiente quia dolorem
-            ipsum cumque nisi. Ea laborum exercitationem aperiam?
+            Frontend Developer with hands-on experience in JavaScript,
+            TypeScript, React, Next.js, and Tailwind CSS. I specialize in
+            developing responsive layouts, interactive components, and optimized
+            web apps that meet both user and business needs. Dedicated to
+            writing clean, maintainable code and continuously learning new
+            technologies to stay ahead in frontend development.
           </AboutText>
           <CounterContainer>
             <Counter value={12} title="Year Experience" />

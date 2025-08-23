@@ -38,13 +38,14 @@ export const HeroTitle = styled.h1`
   font-size: 60px;
   font-weight: 800;
   text-transform: uppercase;
+  line-height: 70px;
 `;
 
 export const HeroDescription = styled.p`
   font-size: 16px;
   font-weight: 300;
   color: #ffffffb3;
-  width: 80%;
+  width: 82%;
 `;
 
 export const HeroButtonBorder = styled.div`
@@ -69,7 +70,11 @@ export const HeroButton = styled.button`
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
-  transition: margin 100ms ease-in-out;
+  transition: margin 100ms ease-in-out, background-color 300ms ease-in-out;
+
+  &:hover {
+    background-color: #345ea3;
+  }
 
   &:active {
     margin: 0;
@@ -88,5 +93,3 @@ export const HeroImage = styled.img`
   height: 100%;
   width: auto;
 `;
-
-

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSectionScroll } from "../../lib/useSectionScroll";
 import {
   Btn,
   HeaderContainer,
@@ -15,40 +15,16 @@ import { IoCallOutline } from "react-icons/io5";
 
 export const Header = () => {
   const sections = ["home", "services", "about", "tools", "projects"];
-  const [active, setActive] = useState("home");
+  const { active, handleScroll } = useSectionScroll(sections, "home");
 
-  const handleScroll = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleReload = () => {
+    window.location.reload();
   };
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.6,
-      }
-    );
-    sections.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <HeaderContainer>
       <SubHeaderContainer>
-        <LogoContainer>
+        <LogoContainer onClick={() => handleReload()}>
           <Logo src="/logo.png" alt="#" />
         </LogoContainer>
         <MenuContainer>
@@ -62,7 +38,6 @@ export const Header = () => {
             </MenuBtn>
           ))}
         </MenuContainer>
-        {/* <Btn onClick={() => handleScroll("contact")}>Contact</Btn> */}
         <Btn onClick={() => handleScroll("contact")}>
           <IoCallOutline className="icon" />
         </Btn>
