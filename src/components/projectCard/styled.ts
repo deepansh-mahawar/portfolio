@@ -16,7 +16,7 @@ export const ProjectImageContainer = styled.div`
   align-items: center;
   border: 1px solid #3e70be;
   padding: 80px;
-  border-radius: 4px;
+  border-radius: 8px;
 `;
 
 export const ProjectImage = styled.img`
@@ -89,13 +89,25 @@ export const ViewButton = styled.button`
   border-radius: 4px;
   padding: 10px 20px;
   cursor: pointer;
+  transition: background-color 300ms ease, transform 300ms ease;
+  font-weight: 300;
 
   .btnIcon {
     font-size: 20px;
+    color: #fff;
+    transition: transform 300ms ease;
   }
 
   &:hover {
-    background-color: #2c5a8c;
+    background-color: #345ea3;
+
+    .btnIcon {
+      transform: scale(1.1);
+    }
+  }
+
+  &:active {
+    transform: scale(0.9);
   }
 `;
 
@@ -110,12 +122,24 @@ export const DownloadButton = styled.button`
   border-radius: 4px;
   padding: 10px 20px;
   cursor: pointer;
+  font-weight: 300;
+  transition: background-color 300ms ease, transform 300ms ease;
 
   .btnIcon {
     font-size: 20px;
+    color: #fff;
+    transition: transform 300ms ease;
   }
 
   &:hover {
-    background-color: #2c5a8c;
+    background-color: #345ea3;
+
+    .btnIcon {
+      transform: scale(1.1);
+    }
+  }
+
+  &:active {
+    transform: scale(0.9);
   }
 `;
