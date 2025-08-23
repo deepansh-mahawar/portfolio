@@ -12,10 +12,14 @@ export const FooterContainer = styled.div`
   padding: 24px 0px;
 `;
 export const FooterSubContainer = styled.div`
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
 `;
 
 export const LogoCon = styled.div`
@@ -37,11 +41,12 @@ export const MenuCon = styled.div`
   gap: 30px;
 `;
 
-export const FooterMenuBtn = styled(Link)`
+export const FooterMenuBtn = styled.button`
   font-size: 16px;
   font-weight: 300;
   color: #fff;
   transition: transform 300ms ease;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.05) translateZ(0);
@@ -52,4 +57,5 @@ export const CopyRight = styled.p`
   font-size: 16px;
   font-weight: 300;
   color: #fff;
+  text-align: right;
 `;

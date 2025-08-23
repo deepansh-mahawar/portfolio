@@ -1,5 +1,6 @@
 "use client";
 
+import { useSectionScroll } from "@/lib/useSectionScroll";
 import {
   CopyRight,
   FooterContainer,
@@ -10,30 +11,25 @@ import {
   MenuCon,
 } from "./styled";
 
-const menuItems = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Projects", href: "/projects" },
-  { label: "Contact Us", href: "/contact" },
-];
-
 export const Footer = () => {
-  const handleLogoClick = () => {
+  const sections = ["home", "services", "about", "tools", "projects"];
+  const { active, handleScroll } = useSectionScroll(sections, "home");
+
+  const handleReload = () => {
     window.location.reload();
   };
 
   return (
     <FooterContainer as="footer">
       <FooterSubContainer>
-        <LogoCon onClick={handleLogoClick}>
+        <LogoCon onClick={() => handleReload()}>
           <Image src="/logo.png" alt="#" />
         </LogoCon>
 
         <MenuCon>
-          {menuItems.map((item) => (
-            <FooterMenuBtn key={item.label} href={item.href}>
-              {item.label}
+          {sections.map((id) => (
+            <FooterMenuBtn key={id} onClick={() => handleScroll(id)}>
+              {id.charAt(0).toUpperCase() + id.slice(1)}
             </FooterMenuBtn>
           ))}
         </MenuCon>

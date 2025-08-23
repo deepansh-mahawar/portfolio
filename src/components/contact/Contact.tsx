@@ -1,3 +1,5 @@
+"use client";
+
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import {
   ContactContainer,
@@ -13,12 +15,17 @@ import {
 import { AiFillInstagram } from "react-icons/ai";
 import Form from "../form/Form";
 
+const RESUME_URL = "/resume.pdf";
+
 export const Contact = ({ sectionId }: { sectionId: string }) => {
+  const openResume = () => {
+    window.open(RESUME_URL, "_blank", "noopener,noreferrer");
+  };
   return (
     <ContactContainer id={sectionId}>
       <ContactSubContainer>
         <Container>
-          <Title>Lets Connect</Title>
+          <Title>{`Let's Connect`}</Title>
           <DescriptionContainer>
             <Description>
               Say Hello at{" "}
@@ -28,7 +35,7 @@ export const Contact = ({ sectionId }: { sectionId: string }) => {
             </Description>
             <Description>
               For more info, heres my{" "}
-              <ContactLink href="#">Resume</ContactLink>
+              <ContactLink href="#" onClick={openResume}>Resume!</ContactLink>
             </Description>
           </DescriptionContainer>
           <SocialIconContainer>

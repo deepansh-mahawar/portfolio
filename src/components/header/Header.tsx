@@ -3,6 +3,7 @@
 import { useSectionScroll } from "../../lib/useSectionScroll";
 import {
   Btn,
+  BtnContainer,
   HeaderContainer,
   Logo,
   LogoContainer,
@@ -38,9 +39,11 @@ export const Header = () => {
             </MenuBtn>
           ))}
         </MenuContainer>
-        <Btn onClick={() => handleScroll("contact")}>
-          <IoCallOutline className="icon" />
-        </Btn>
+        <BtnContainer>
+          <Btn onClick={() => handleScroll("contact")}>
+            <IoCallOutline className="icon" />
+          </Btn>
+        </BtnContainer>
       </SubHeaderContainer>
     </HeaderContainer>
   );

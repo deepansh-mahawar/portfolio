@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 30px 0px;
+  padding: 20px 0px;
   position: fixed;
   top: 0;
   z-index: 1000;
@@ -18,11 +18,13 @@ export const SubHeaderContainer = styled.div`
   width: 80%;
   border-radius: 50px;
   border: 1px solid #3e70be;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   padding: 10px;
   backdrop-filter: blur(10px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 `;
 
 export const LogoContainer = styled.div`
@@ -53,14 +55,19 @@ export const MenuBtn = styled.button<{ $active?: boolean }>(
   ({ $active = false }) => `
   font-size: 16px;
   font-weight: ${$active ? "500" : "300"};
-  transition: transform 500ms ease;
+  transition: transform 300ms ease;
   cursor: pointer;
 
   &:hover{
-    transform: scale(1.05);
+    transform: scale(1.05) translateZ(0);
   }
 `
 );
+
+export const BtnContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
 
 export const Btn = styled.button`
   display: flex;

@@ -45,7 +45,7 @@ export const Description = styled.div`
 
 export const ContactLink = styled(Link)`
   color: #fff;
-  transition: border-bottom 400ms ease-in-out;
+  transition: border-bottom 300ms ease;
 
   &:hover {
     border-bottom: 1px solid #3e70be;

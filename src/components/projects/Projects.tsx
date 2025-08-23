@@ -1,3 +1,4 @@
+import { Heading } from "../heading/Heading";
 import { ProjectCard } from "../projectCard/ProjectCard";
 import { ProjectsContainer, ProjectsSubContainer } from "./styled";
 
@@ -5,6 +6,11 @@ export const Projects = ({ sectionId }: { sectionId: string }) => {
   return (
     <ProjectsContainer id={sectionId}>
       <ProjectsSubContainer>
+        <Heading
+          title="Projects"
+          description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias
+          recusandae nobis natus fuga vel numquam, non officiis nemo eveniet"
+        />
         <ProjectCard
           projectImage="/project.png"
           projectTitle="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
