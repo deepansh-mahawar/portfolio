@@ -39,7 +39,9 @@ export const ServicesCard = ({
         </>
       ) : (
         <>
-          <Index>{index}</Index>
+
+            <Index>{index}</Index>
+          
           <ServiceTitle>{title}</ServiceTitle>
           <ServiceDescripiton>{desc}</ServiceDescripiton>
         </>
