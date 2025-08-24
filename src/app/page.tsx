@@ -8,8 +8,8 @@ import { Tool } from "@/components/tool/Tool";
 export default function Home() {
   return (
     <>
-      <Hero sectionId="home"/>
-      <Services sectionId="services" />
+      {/* <Hero sectionId="home"/> */}
+      {/* <Services sectionId="services" /> */}
       {/* <About sectionId="about" /> */}
       {/* <Tool sectionId="tools" /> */}
       {/* <Projects sectionId="projects" /> */}
