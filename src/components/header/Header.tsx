@@ -1,6 +1,8 @@
 "use client";
 
+
 import { useSectionScroll } from "../../lib/useSectionScroll";
+import { Mode } from "../mode/Mode";
 import {
   Btn,
   BtnContainer,
@@ -45,6 +47,7 @@ export const Header = () => {
           </Btn>
         </BtnContainer>
       </SubHeaderContainer>
+      <Mode />
     </HeaderContainer>
   );
 };
